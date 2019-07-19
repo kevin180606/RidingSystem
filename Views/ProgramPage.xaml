@@ -1,0 +1,47 @@
+﻿<controls:NavigationPage x:Class="RidingSystem.Views.ProgramPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RidingSystem.Views"
+      xmlns:controls="clr-namespace:LinnerToolkit.Desktop.ModernUI.Windows.Controls;assembly=LinnerToolkit.Desktop.ModernUI"
+                         xmlns:localcontrols="clr-namespace:RidingSystem.Common.Controls;assembly=RidingSystem.Common"
+      mc:Ignorable="d" 
+      d:DesignHeight="1920" d:DesignWidth="1080"
+      Title="ProgramPage">
+    <controls:NavigationPage.Background>
+        <ImageBrush ImageSource="/RidingSystem.Assets;component/Assets/Image/ProgramPage/Background.jpg" Stretch="Fill"/>
+    </controls:NavigationPage.Background>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <localcontrols:SoundImageButton Grid.Row="0" HorizontalAlignment="Left"
+                              NormalImage="/RidingSystem.Assets;component/Assets/Image/Common/Button_Return_Normal.png"
+                              PressedImage="/RidingSystem.Assets;component/Assets/Image/Common/Button_Return_Pressed.png"
+                              Command="{Binding GoBackCommand}"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel x:Name="ButtonContainer" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+                <!--<contorls:ImageButton NormalImage="/RidingSystem.Assets;component/Assets/Image/ProgramPage/Button_YDXX_Normal.png"
+                                  PressedImage="/RidingSystem.Assets;component/Assets/Image/ProgramPage/Button_YDXX_Pressed.png"
+                                  Command="{Binding NavigateCommand}" CommandParameter="ScenePage"/>
+            <contorls:ImageButton NormalImage="/RidingSystem.Assets;component/Assets/Image/ProgramPage/Button_JLYG_Normal.png"
+                                  PressedImage="/RidingSystem.Assets;component/Assets/Image/ProgramPage/Button_JLYG_Pressed.png"/>
+            <contorls:ImageButton NormalImage="/RidingSystem.Assets;component/Assets/Image/ProgramPage/Button_SJYG_Normal.png"
+                                  PressedImage="/RidingSystem.Assets;component/Assets/Image/ProgramPage/Button_SJYG_Pressed.png"/>
+            <contorls:ImageButton IsEnabled="False"
+                                  DisabledImage="/RidingSystem.Assets;component/Assets/Image/ProgramPage/Button_SXZZ_Disabled.png"/>
+            <contorls:ImageButton IsEnabled="False"
+                                  DisabledImage="/RidingSystem.Assets;component/Assets/Image/ProgramPage/Button_ZADB_Disabled.png"/>-->
+            </StackPanel>
+        </Grid>
+        
+    </Grid>
+</controls:NavigationPage>
